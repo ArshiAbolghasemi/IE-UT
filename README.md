@@ -1,2 +1,2 @@
-# IE---UT
+# IE-UT
 Internet Engineering UT Course Projects

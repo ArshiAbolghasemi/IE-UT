@@ -38,5 +38,5 @@ public class AddressRepository {
         addresses.add(address);
     }
 
-    private int generateId() { return addresses.size(); }
+    private int generateId() { return addresses.size() + 1; }
 }

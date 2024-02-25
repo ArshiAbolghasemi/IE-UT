@@ -42,5 +42,5 @@ public class UserRepository {
         users.add(user);
     }
 
-    private int generateId() { return users.size(); }
+    private int generateId() { return users.size() + 1; }
 }

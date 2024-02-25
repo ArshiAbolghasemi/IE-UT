@@ -28,4 +28,12 @@ public class UserRepository {
 
         return userEntity.orElse(null);
     }
+
+    public UserEntity getUserByEmail(String email) {
+        Optional<UserEntity> userEntity = users.stream()
+                .filter(users -> users.getMail().equals(email))
+                .findFirst();
+
+        return userEntity.orElse(null);
+    }
 }

@@ -21,7 +21,7 @@ public class UserRepository {
         return INSTANCE;
     }
 
-    public UserEntity getUser(String username) {
+    public UserEntity getUserByUsername(String username) {
         Optional<UserEntity> userEntity = users.stream()
                 .filter(user -> user.getUsername().equals(username))
                 .findFirst();

@@ -2,6 +2,8 @@ package com.mizdooni.repository;
 
 import com.mizdooni.entity.AddressEntity;
 import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Optional;
 
 public class AddressRepository {
 
@@ -18,6 +20,17 @@ public class AddressRepository {
         }
 
         return INSTANCE;
+    }
+
+    public AddressEntity getAddress(String country, String city) {
+        Optional<AddressEntity> addressEntity = addresses.stream()
+                .filter(address -> (
+                        Objects.equals(address.getCountry(), country) &&
+                        Objects.equals(address.getCity(), city)
+                ))
+                .findFirst();
+
+        return addressEntity.orElse(null);
     }
 
     public void persist(AddressEntity address) {

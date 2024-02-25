@@ -20,12 +20,17 @@ public class PasswordService {
         return INSTANCE;
     }
 
-    public String hash(String password) throws NoSuchAlgorithmException {
+    public String hash(String password) throws RuntimeException {
         SecureRandom random = new SecureRandom();
         byte[] salt = new byte[SALT_LENGTH];
         random.nextBytes(salt);
 
-        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        MessageDigest digest = null;
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
         digest.update(salt);
 
         byte[] hashedPassword = digest.digest(password.getBytes());

@@ -1,6 +1,6 @@
 package com.mizdooni.entity;
 
-import java.util.Arrays;
+import com.mizdooni.validator.user.RoleValidator;
 
 public class UserEntity {
 
@@ -56,8 +56,7 @@ public class UserEntity {
     public String getRole() { return this.role; }
 
     public UserEntity setRole(String role) {
-        assert Arrays.asList(UserEntity.ALL_ROLE).contains(role) :
-                String.format("role should be in %s", String.join(", ", UserEntity.ALL_ROLE));
+        (new RoleValidator(role)).validate();
 
         this.role = role;
         return this;

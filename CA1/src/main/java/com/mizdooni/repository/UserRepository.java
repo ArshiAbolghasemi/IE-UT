@@ -36,4 +36,11 @@ public class UserRepository {
 
         return userEntity.orElse(null);
     }
+
+    public void persist(UserEntity user) {
+        user.setId(this.generateId());
+        users.add(user);
+    }
+
+    private int generateId() { return users.size(); }
 }

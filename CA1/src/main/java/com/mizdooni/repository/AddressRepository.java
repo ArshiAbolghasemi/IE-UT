@@ -19,4 +19,11 @@ public class AddressRepository {
 
         return INSTANCE;
     }
+
+    public void persist(AddressEntity address) {
+        address.setId(this.generateId());
+        addresses.add(address);
+    }
+
+    private int generateId() { return addresses.size(); }
 }

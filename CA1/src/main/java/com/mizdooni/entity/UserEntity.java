@@ -56,7 +56,8 @@ public class UserEntity {
     public String getRole() { return this.role; }
 
     public UserEntity setRole(String role) {
-        assert Arrays.asList(UserEntity.ALL_ROLE).contains(role);
+        assert Arrays.asList(UserEntity.ALL_ROLE).contains(role):
+                String.format("role should be in %s", String.join(", ", UserEntity.ALL_ROLE));
 
         this.role = role;
         return this;

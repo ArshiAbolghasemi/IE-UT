@@ -11,7 +11,7 @@ import com.mizdooni.validator.user.EmailValidator;
 import com.mizdooni.validator.user.PasswordValidator;
 import com.mizdooni.validator.user.UsernameValidator;
 
-public class AddingNewUserModel {
+public class AddNewUserModel {
 
     private final AddUserCommandDTO addUserCommandDTO;
 
@@ -21,9 +21,9 @@ public class AddingNewUserModel {
 
     private final PasswordService passwordService;
 
-    public AddingNewUserModel(AddUserCommandDTO addUserCommandDTO,
-                              UserRepository userRepository, AddressRepository addressRepository,
-                              PasswordService passwordService) {
+    public AddNewUserModel(AddUserCommandDTO addUserCommandDTO,
+                           UserRepository userRepository, AddressRepository addressRepository,
+                           PasswordService passwordService) {
         this.addUserCommandDTO = addUserCommandDTO;
         this.userRepository = userRepository;
         this.addressRepository = addressRepository;

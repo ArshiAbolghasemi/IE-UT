@@ -1,10 +1,13 @@
 package com.mizdooni.repository;
 
 import com.mizdooni.entity.TableReservationEntity;
+import com.mizdooni.entity.UserEntity;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TableReservationRepository {
 
@@ -41,6 +44,12 @@ public class TableReservationRepository {
                 .findFirst();
 
         return tableReservationEntity.orElse(null);
+    }
+
+    public List<TableReservationEntity> getTableReservationsOfUser(UserEntity user) {
+        return tableReservations.stream()
+                .filter(tableReservation -> tableReservation.getUserId() == user.getId())
+                .collect(Collectors.toList());
     }
 
     public void persist(TableReservationEntity tableReservationEntity) {

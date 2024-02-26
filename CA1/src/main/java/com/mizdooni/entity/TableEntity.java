@@ -2,11 +2,20 @@ package com.mizdooni.entity;
 
 public class TableEntity {
 
+    private int id;
+
     private int tableNumber;
 
     private int restaurantId;
 
     private int seatsNumber;
+
+    public TableEntity setId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public int getId() { return this.id; }
 
     public TableEntity setTableNumber(int tableNumber) {
         this.tableNumber = tableNumber;

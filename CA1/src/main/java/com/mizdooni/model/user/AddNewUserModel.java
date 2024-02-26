@@ -26,7 +26,7 @@ public class AddNewUserModel {
         this.passwordService = passwordService;
     }
 
-    public void execute() throws AssertionError, RuntimeException {
+    public void execute() throws RuntimeException {
         AddressEntity address = this.addressRepository.getAddress(this.addUserCommandDTO.getAddress().getCountry(),
                 this.addUserCommandDTO.getAddress().getCity());
         if (address == null) {

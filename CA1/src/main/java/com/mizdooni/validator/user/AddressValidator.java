@@ -11,16 +11,20 @@ public class AddressValidator {
         this.city = city;
     }
 
-    public void validate() throws AssertionError {
+    public void validate() throws IllegalArgumentException {
         this.validateCountry();
         this.validateCity();
     }
 
-    private void validateCountry() throws AssertionError {
-        assert this.country != null && this.country.isEmpty() : "address country should not be null";
+    private void validateCountry() throws IllegalArgumentException {
+        if (this.country == null || this.country.isEmpty()) {
+            throw new IllegalArgumentException("address country should not be null");
+        }
     }
 
-    private void validateCity() throws AssertionError {
-        assert this.city != null && this.city.isEmpty() : "address city should not be null";
+    private void validateCity() throws IllegalArgumentException {
+        if (this.city == null || this.city.isEmpty()) {
+            throw new IllegalArgumentException("address city should not be null");
+        }
     }
 }

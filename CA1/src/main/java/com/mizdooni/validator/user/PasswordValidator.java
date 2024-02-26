@@ -10,11 +10,13 @@ public class PasswordValidator {
         this.value = value;
     }
 
-    public void validate() throws AssertionError {
+    public void validate() throws IllegalArgumentException {
         this.checkFormat();
     }
 
-    public void checkFormat() {
-        assert (this.value != null && !this.value.isEmpty()) : "password should not be empty";
+    public void checkFormat() throws IllegalArgumentException {
+        if (this.value == null || this.value.isEmpty()) {
+            throw new IllegalArgumentException("password should not be empty");
+        }
     }
 }

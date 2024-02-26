@@ -21,7 +21,7 @@ public class AddNewUserForm implements Form {
     }
 
     @Override
-    public void execute(String[] args) throws AssertionError {
+    public void execute(String[] args) throws RuntimeException {
         try {
             AddUserCommandDTO addUserCommandDTO = new ObjectMapper()
                     .readerFor(AddUserCommandDTO.class)
@@ -38,7 +38,7 @@ public class AddNewUserForm implements Form {
 
     }
 
-    private void validate(AddUserCommandDTO addUserCommandDTO) throws AssertionError {
+    private void validate(AddUserCommandDTO addUserCommandDTO) throws IllegalArgumentException {
         (new UsernameValidator(addUserCommandDTO.getUsername())).validate();
         (new EmailValidator(addUserCommandDTO.getEmail())).validate();
         (new PasswordValidator(addUserCommandDTO.getPassword())).validate();

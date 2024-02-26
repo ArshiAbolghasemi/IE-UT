@@ -14,17 +14,21 @@ public class EmailValidator {
         this.value = value;
     }
 
-    public void validate() throws AssertionError {
+    public void validate() throws IllegalArgumentException {
         this.checkFormat();
         this.checkUniqueness();
     }
 
-    private void checkFormat() {
-        assert this.value.matches(REGEX) : "invalid email address!";
+    private void checkFormat() throws IllegalArgumentException {
+        if (!this.value.matches(REGEX)) {
+            throw new IllegalArgumentException("invalid email address!");
+        }
     }
 
-    private void checkUniqueness() {
+    private void checkUniqueness() throws IllegalArgumentException {
         UserEntity user = UserRepository.getInstance().getUserByEmail(this.value);
-        assert user == null : "user with this email is exists!";
+        if (user != null) {
+            throw new IllegalArgumentException("user with this email is exists!");
+        }
     }
 }

@@ -33,6 +33,14 @@ public class TableReservationRepository {
         return tableReservationEntity.orElse(null);
     }
 
+    public TableReservationEntity getById(int reservationId) {
+        Optional<TableReservationEntity> tableReservationEntity = tableReservations.stream()
+                .filter(tableReservation -> tableReservation.getId() == reservationId)
+                .findFirst();
+
+        return tableReservationEntity.orElse(null);
+    }
+
     public void persist(TableReservationEntity tableReservationEntity) {
         tableReservationEntity.setId(this.generateId());
         tableReservations.add(tableReservationEntity);

@@ -24,10 +24,13 @@ public class CommandListener {
                 .register("addRestaurant", AddNewRestaurantForm.class.getName());
     }
 
-    private CommandListener register(String commandName, String commandClass) throws RuntimeException, AssertionError {
+    private CommandListener register(String commandName, String commandClass) throws RuntimeException {
         try {
-            assert Command.class.isAssignableFrom(Class.forName(commandClass)) :
-                    String.format("%s should implement %s", commandClass, Command.class.getName());
+            if (!Command.class.isAssignableFrom(Class.forName(commandClass))) {
+                throw new IllegalArgumentException(
+                        String.format("%s should implement %s", commandClass, Command.class.getName()));
+            }
+
             this.commands.put(commandName, commandClass);
 
             return this;

@@ -45,7 +45,7 @@ public class TableReservationEntity {
 
     public int getTableId() { return tableId; }
 
-    public TableReservationEntity setReservationEntity(LocalDateTime reservationDate) {
+    public TableReservationEntity setReservationDate(LocalDateTime reservationDate) {
         this.reservationDate = reservationDate;
         return this;
     }

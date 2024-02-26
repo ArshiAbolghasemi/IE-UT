@@ -35,4 +35,11 @@ public class RestaurantAddressRepository {
         return restaurantAddressEntity.orElse(null);
     }
 
+    public void persist(RestaurantAddressEntity restaurantAddress) {
+        restaurantAddress.setId(this.generateId());
+        restaurantAddresses.add(restaurantAddress);
+    }
+
+    private int generateId() { return restaurantAddresses.size() + 1; }
+
 }

@@ -23,7 +23,7 @@ public class RestaurantAddressRepository {
         return INSTANCE;
     }
 
-    public RestaurantAddressEntity getRestaurant(String country, String city, String street) {
+    public RestaurantAddressEntity getRestaurantAddress(String country, String city, String street) {
         Optional<RestaurantAddressEntity> restaurantAddressEntity = restaurantAddresses.stream()
                 .filter(restaurantAddress -> (
                     restaurantAddress.getCountry().equals(country) &&

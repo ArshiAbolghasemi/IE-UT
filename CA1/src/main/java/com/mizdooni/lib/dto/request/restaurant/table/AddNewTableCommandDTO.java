@@ -27,6 +27,7 @@ public class AddNewTableCommandDTO {
 
     public String getManagerUsername() { return this.managerUsername; }
 
+    @JsonSetter("seatsNumber")
     public void setSeatNumbers(int seatNumbers) { this.seatNumbers = seatNumbers; }
 
     public int getSeatNumbers() { return this.seatNumbers; }

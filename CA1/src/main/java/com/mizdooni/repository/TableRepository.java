@@ -33,4 +33,6 @@ public class TableRepository {
         return tableEntity.orElse(null);
     }
 
+    public void persist(TableEntity table) { tables.add(table); }
+
 }

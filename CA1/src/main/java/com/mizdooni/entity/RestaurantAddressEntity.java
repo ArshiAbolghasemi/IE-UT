@@ -11,4 +11,10 @@ public class RestaurantAddressEntity extends AddressEntity {
 
     public String getStreet() { return this.street; }
 
+    @Override
+    public RestaurantAddressEntity setCity(String city) { return (RestaurantAddressEntity) super.setCity(city); }
+
+    public RestaurantAddressEntity setCountry(String country) {
+        return (RestaurantAddressEntity) super.setCountry(country);
+    }
 }

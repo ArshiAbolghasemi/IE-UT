@@ -8,7 +8,7 @@ public class RestaurantEntity {
 
     private String name;
 
-    private String managerUsername;
+    private int managerUserId;
 
     private String type;
 
@@ -34,12 +34,12 @@ public class RestaurantEntity {
 
     public String getName() { return this.name; }
 
-    public RestaurantEntity setManagerUsername(String managerUsername) {
-        this.managerUsername = managerUsername;
+    public RestaurantEntity setManagerUserId(int managerUserId) {
+        this.managerUserId = managerUserId;
         return this;
     }
 
-    public String getManagerUsername() { return this.managerUsername; }
+    public int getManagerUserId() { return this.managerUserId; }
 
     public RestaurantEntity setType(String type) {
         this.type = type;

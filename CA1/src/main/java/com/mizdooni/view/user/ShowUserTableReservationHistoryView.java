@@ -29,6 +29,8 @@ public class ShowUserTableReservationHistoryView implements View {
             return new CommandResponseDTO()
                     .put("data", new CommandResponseDTO()
                             .put("reservationHistory", tableReservations.stream()
+                                    .filter(tableReservation -> tableReservation.getStatus()
+                                            .equals(TableReservationEntity.STATUS_RESERVED))
                                     .map(tableReservation -> new CommandResponseDTO()
                                             .put("reservationNumber", tableReservation.getId())
                                             .put("restaurantName", tableReservation.getTable().getRestaurant()

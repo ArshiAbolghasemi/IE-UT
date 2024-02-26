@@ -2,7 +2,7 @@ package com.mizdooni.lib.dto.request.restaurant.table;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
@@ -14,7 +14,7 @@ public class ReserveTableCommandDTO {
 
     private int tableNumber;
 
-    private LocalDate datetime;
+    private LocalDateTime datetime;
 
     @JsonSetter("username")
     public void setUsername(String username) { this.username = username; }
@@ -36,12 +36,12 @@ public class ReserveTableCommandDTO {
         String format = "yyyy-MM-dd HH:mm";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         try {
-            this.datetime = LocalDate.parse(datetime, formatter);
+            this.datetime = LocalDateTime.parse(datetime, formatter);
         } catch (DateTimeParseException exception) {
             throw new RuntimeException(String.format("datetime should be format %s", format));
         }
     }
 
-    public LocalDate getDatetime() { return datetime; }
+    public LocalDateTime getDatetime() { return datetime; }
 
 }

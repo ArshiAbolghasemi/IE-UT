@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public class TableReservationRepository {
 
+    private static final int NEW_ENTITY_ID = 0;
+
     private static TableReservationRepository INSTANCE;
 
     private static ArrayList<TableReservationEntity> tableReservations;
@@ -42,8 +44,20 @@ public class TableReservationRepository {
     }
 
     public void persist(TableReservationEntity tableReservationEntity) {
+        if (tableReservationEntity.getId() == TableReservationRepository.NEW_ENTITY_ID) {
+            this.insert(tableReservationEntity);
+        } else {
+            this.update(tableReservationEntity);
+        }
+    }
+
+    private void insert(TableReservationEntity tableReservationEntity) {
         tableReservationEntity.setId(this.generateId());
         tableReservations.add(tableReservationEntity);
+    }
+
+    private void update(TableReservationEntity tableReservationEntity) {
+        tableReservations.set(tableReservationEntity.getId() - 1, tableReservationEntity);
     }
 
     private int generateId() { return tableReservations.size() + 1; }

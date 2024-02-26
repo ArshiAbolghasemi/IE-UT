@@ -1,7 +1,10 @@
 package com.mizdooni.repository;
 
 import com.mizdooni.entity.TableReservationEntity;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class TableReservationRepository {
 
@@ -18,6 +21,16 @@ public class TableReservationRepository {
         }
 
         return INSTANCE;
+    }
+
+    public TableReservationEntity getTableReservation(int tableId, LocalDateTime reservationDate, String status) {
+        Optional<TableReservationEntity> tableReservationEntity = tableReservations.stream()
+                .filter(tableReservation -> tableReservation.getTableId() == tableId &&
+                        tableReservation.getReservationDate().isEqual(reservationDate) &&
+                        tableReservation.getStatus().equals(status))
+                .findFirst();
+
+        return tableReservationEntity.orElse(null);
     }
 
 }

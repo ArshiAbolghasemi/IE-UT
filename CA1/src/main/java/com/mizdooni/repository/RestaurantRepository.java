@@ -29,6 +29,13 @@ public class RestaurantRepository {
         return restaurantEntity.orElse(null);
     }
 
+    public RestaurantEntity getRestaurantById(int restaurantId) {
+        return restaurants.stream()
+                .filter(restaurant -> restaurant.getId() == restaurantId)
+                .findFirst()
+                .orElse(null);
+    }
+
     public void persist(RestaurantEntity restaurantEntity) {
         restaurantEntity.setId(this.generateId());
         restaurants.add(restaurantEntity);

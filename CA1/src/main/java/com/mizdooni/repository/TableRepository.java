@@ -3,6 +3,7 @@ package com.mizdooni.repository;
 import com.mizdooni.entity.TableEntity;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class TableRepository {
 
@@ -19,6 +20,17 @@ public class TableRepository {
         }
 
         return INSTANCE;
+    }
+
+    public TableEntity getTable(int tableNumber, int restaurantId) {
+        Optional<TableEntity> tableEntity = tables.stream()
+                .filter(table -> (
+                        table.getTableNumber() == tableNumber &&
+                        table.getRestaurantId() == restaurantId
+                ))
+                .findFirst();
+
+        return tableEntity.orElse(null);
     }
 
 }

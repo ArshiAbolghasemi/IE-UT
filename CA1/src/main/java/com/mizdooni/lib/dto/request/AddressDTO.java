@@ -1,4 +1,4 @@
-package com.mizdooni.lib.dto.request.user;
+package com.mizdooni.lib.dto.request;
 
 public class AddressDTO {
 

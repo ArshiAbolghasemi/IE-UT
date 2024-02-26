@@ -2,6 +2,7 @@ package com.mizdooni.lib.dto.request.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import com.mizdooni.lib.dto.request.AddressDTO;
 
 import java.util.Map;
 

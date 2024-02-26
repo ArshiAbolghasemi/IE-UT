@@ -2,7 +2,7 @@ package com.mizdooni.lib.dto.request.user;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 
-public class ShowReservationHistoryDTO {
+public class ShowTableReservationHistoryDTO {
 
     private String username;
 

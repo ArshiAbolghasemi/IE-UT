@@ -23,6 +23,6 @@ public class RoleValidator {
 
     private void checkValidUserRole() throws AssertionError {
         assert Arrays.asList(UserEntity.ALL_ROLE).contains(this.value) :
-                String.format("role should be in %s", String.join(", ", UserEntity.ALL_ROLE))
+                String.format("role should be in %s", String.join(", ", UserEntity.ALL_ROLE));
     }
 }

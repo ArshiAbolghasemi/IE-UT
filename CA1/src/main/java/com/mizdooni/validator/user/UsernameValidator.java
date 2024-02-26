@@ -21,8 +21,8 @@ public class UsernameValidator {
             throw new IllegalArgumentException("username is required");
         }
 
-        if (!this.value.matches("[a-zA-Z]+")) {
-            throw new IllegalArgumentException("username should only contains characters");
+        if (!this.value.matches("[a-zA-Z0-9]+")) {
+            throw new IllegalArgumentException("username should only contains characters and number");
         }
     }
 

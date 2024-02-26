@@ -1,5 +1,7 @@
 package com.mizdooni.entity;
 
+import com.mizdooni.repository.RestaurantRepository;
+
 public class TableEntity {
 
     private int id;
@@ -30,6 +32,10 @@ public class TableEntity {
     }
 
     public int getRestaurantId() { return restaurantId; }
+
+    public RestaurantEntity getRestaurant() {
+        return RestaurantRepository.getInstance().getRestaurantById(this.restaurantId);
+    }
 
     public TableEntity setSeatsNumber(int seatsNumber) {
         this.seatsNumber = seatsNumber;

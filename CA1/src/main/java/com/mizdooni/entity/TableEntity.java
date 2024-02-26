@@ -6,7 +6,7 @@ public class TableEntity {
 
     private int restaurantId;
 
-    private int seatNumbers;
+    private int seatsNumber;
 
     public TableEntity setTableNumber(int tableNumber) {
         this.tableNumber = tableNumber;
@@ -22,11 +22,11 @@ public class TableEntity {
 
     public int getRestaurantId() { return restaurantId; }
 
-    public TableEntity setSeatNumbers(int seatNumbers) {
-        this.seatNumbers = seatNumbers;
+    public TableEntity setSeatsNumber(int seatsNumber) {
+        this.seatsNumber = seatsNumber;
         return this;
     }
 
-    public int getSeatNumbers() { return seatNumbers; }
+    public int getSeatsNumber() { return seatsNumber; }
 
 }

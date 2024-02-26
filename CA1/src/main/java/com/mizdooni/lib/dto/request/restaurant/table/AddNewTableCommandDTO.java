@@ -10,7 +10,7 @@ public class AddNewTableCommandDTO {
 
     private String managerUsername;
 
-    private int seatNumbers;
+    private int seatsNumber;
 
     @JsonSetter("tableNumber")
     public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber; }
@@ -28,8 +28,8 @@ public class AddNewTableCommandDTO {
     public String getManagerUsername() { return this.managerUsername; }
 
     @JsonSetter("seatsNumber")
-    public void setSeatNumbers(int seatNumbers) { this.seatNumbers = seatNumbers; }
+    public void setSeatsNumber(int seatsNumber) { this.seatsNumber = seatsNumber; }
 
-    public int getSeatNumbers() { return this.seatNumbers; }
+    public int getSeatsNumber() { return this.seatsNumber; }
 
 }

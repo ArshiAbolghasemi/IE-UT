@@ -1,5 +1,7 @@
 package com.mizdooni.entity;
 
+import com.mizdooni.repository.TableRepository;
+
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
@@ -44,6 +46,8 @@ public class TableReservationEntity {
     }
 
     public int getTableId() { return tableId; }
+
+    public TableEntity getTable() { return TableRepository.getInstance().geTabletById(this.tableId); }
 
     public TableReservationEntity setReservationDate(LocalDateTime reservationDate) {
         this.reservationDate = reservationDate;

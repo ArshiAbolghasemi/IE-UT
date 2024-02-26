@@ -33,6 +33,14 @@ public class TableRepository {
         return tableEntity.orElse(null);
     }
 
+    public TableEntity geTabletById(int tableId) {
+        Optional<TableEntity> tableEntity = tables.stream()
+                .filter(table -> table.getId() == tableId)
+                .findFirst();
+
+        return tableEntity.orElse(null);
+    }
+
     public void persist(TableEntity table) {
         table.setId(this.generateId());
         tables.add(table);

@@ -2,7 +2,7 @@ package com.mizdooni.model.user;
 
 import com.mizdooni.entity.AddressEntity;
 import com.mizdooni.entity.UserEntity;
-import com.mizdooni.lib.dto.user.AddUserCommandDTO;
+import com.mizdooni.lib.dto.request.user.AddUserCommandDTO;
 import com.mizdooni.repository.AddressRepository;
 import com.mizdooni.repository.UserRepository;
 import com.mizdooni.service.PasswordService;

@@ -6,10 +6,6 @@ import com.mizdooni.lib.dto.request.user.AddUserCommandDTO;
 import com.mizdooni.repository.AddressRepository;
 import com.mizdooni.repository.UserRepository;
 import com.mizdooni.service.PasswordService;
-import com.mizdooni.validator.user.AddressValidator;
-import com.mizdooni.validator.user.EmailValidator;
-import com.mizdooni.validator.user.PasswordValidator;
-import com.mizdooni.validator.user.UsernameValidator;
 
 public class AddNewUserModel {
 
@@ -31,7 +27,6 @@ public class AddNewUserModel {
     }
 
     public void execute() throws AssertionError, RuntimeException {
-        this.validate();
         AddressEntity address = this.addressRepository.getAddress(this.addUserCommandDTO.getAddress().getCountry(),
                 this.addUserCommandDTO.getAddress().getCity());
         if (address == null) {
@@ -55,14 +50,6 @@ public class AddNewUserModel {
         return new AddressEntity()
                 .setCity(this.addUserCommandDTO.getAddress().getCity())
                 .setCountry(this.addUserCommandDTO.getAddress().getCountry());
-    }
-
-    private void validate() throws AssertionError {
-        (new UsernameValidator(this.addUserCommandDTO.getUsername())).validate();
-        (new EmailValidator(this.addUserCommandDTO.getEmail())).validate();
-        (new PasswordValidator(this.addUserCommandDTO.getPassword())).validate();
-        (new AddressValidator(this.addUserCommandDTO.getAddress().getCountry(),
-                this.addUserCommandDTO.getAddress().getCity())).validate();
     }
 
 }

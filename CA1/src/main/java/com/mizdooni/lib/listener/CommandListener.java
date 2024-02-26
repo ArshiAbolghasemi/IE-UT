@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mizdooni.form.restaurant.AddNewRestaurantForm;
 import com.mizdooni.form.restaurant.table.AddNewTableForm;
+import com.mizdooni.form.restaurant.table.ReserveTableForm;
 import com.mizdooni.form.user.AddNewUserForm;
 import com.mizdooni.lib.command.Command;
 import com.mizdooni.lib.command.Form;
@@ -23,7 +24,8 @@ public class CommandListener {
         this
                 .register("addUser", AddNewUserForm.class.getName())
                 .register("addRestaurant", AddNewRestaurantForm.class.getName())
-                .register("addTable", AddNewTableForm.class.getName());
+                .register("addTable", AddNewTableForm.class.getName())
+                .register("reserveTable", ReserveTableForm.class.getName());
     }
 
     private CommandListener register(String commandName, String commandClass) throws RuntimeException {

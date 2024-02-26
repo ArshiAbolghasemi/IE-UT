@@ -2,6 +2,7 @@ package com.mizdooni.repository;
 
 import com.mizdooni.entity.RestaurantEntity;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class RestaurantRepository {
 
@@ -20,5 +21,12 @@ public class RestaurantRepository {
         return INSTANCE;
     }
 
+    public RestaurantEntity getRestaurantByName(String name) {
+        Optional<RestaurantEntity> restaurantEntity = restaurants.stream()
+                .filter(restaurant -> restaurant.getName().equals(name))
+                .findFirst();
+
+        return restaurantEntity.orElse(null);
+    }
 
 }

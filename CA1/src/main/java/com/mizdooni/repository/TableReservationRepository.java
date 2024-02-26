@@ -33,4 +33,11 @@ public class TableReservationRepository {
         return tableReservationEntity.orElse(null);
     }
 
+    public void persist(TableReservationEntity tableReservationEntity) {
+        tableReservationEntity.setId(this.generateId());
+        tableReservations.add(tableReservationEntity);
+    }
+
+    private int generateId() { return tableReservations.size() + 1; }
+
 }

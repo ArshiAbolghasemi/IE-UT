@@ -1,6 +1,6 @@
 package com.mizdooni.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 public class TableReservationEntity {
@@ -20,7 +20,7 @@ public class TableReservationEntity {
 
     private int tableId;
 
-    private LocalDate reservationDate;
+    private LocalDateTime reservationDate;
 
     private String status;
 
@@ -45,12 +45,12 @@ public class TableReservationEntity {
 
     public int getTableId() { return tableId; }
 
-    public TableReservationEntity setReservationEntity(LocalDate reservationDate) {
+    public TableReservationEntity setReservationEntity(LocalDateTime reservationDate) {
         this.reservationDate = reservationDate;
         return this;
     }
 
-    public LocalDate getReservationDate() { return reservationDate; }
+    public LocalDateTime getReservationDate() { return reservationDate; }
 
     public TableReservationEntity setStatus(String status) throws IllegalArgumentException {
         if (!Arrays.asList(TableReservationEntity.ALL_STATUS).contains(status)) {

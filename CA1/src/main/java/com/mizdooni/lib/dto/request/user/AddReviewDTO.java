@@ -19,38 +19,38 @@ public class AddReviewDTO {
     private String comment;
 
     @JsonSetter("username")
-    private void setUsername(String username) { this.username = username; }
+    public void setUsername(String username) { this.username = username; }
 
     public String getUsername() { return username; }
 
     @JsonSetter("restaurantName")
-    private void setRestaurantName(String restaurantName) { this.restaurantName = restaurantName; }
+    public void setRestaurantName(String restaurantName) { this.restaurantName = restaurantName; }
 
-    private String getRestaurantName() { return this.restaurantName; }
+    public String getRestaurantName() { return this.restaurantName; }
 
     @JsonSetter("foodRate")
-    private void setFoodRate(int foodRate) { this.foodRate = foodRate; }
+    public void setFoodRate(int foodRate) { this.foodRate = foodRate; }
 
     public int getFoodRate() { return foodRate; }
 
     @JsonSetter("serviceRate")
-    private void setServiceRate(int serviceRate) { this.serviceRate = serviceRate; }
+    public void setServiceRate(int serviceRate) { this.serviceRate = serviceRate; }
 
-    private int getServiceRate() { return this.serviceRate; }
+    public int getServiceRate() { return this.serviceRate; }
 
     @JsonSetter("ambianceRate")
-    private void setAmbianceRate(int ambianceRate) { this.ambianceRate = ambianceRate; }
+    public void setAmbianceRate(int ambianceRate) { this.ambianceRate = ambianceRate; }
 
-    private int getAmbianceRate() { return this.ambianceRate; }
+    public int getAmbianceRate() { return this.ambianceRate; }
 
     @JsonSetter("overallRate")
-    private void setOverallRate(int overallRate) { this.overallRate = overallRate; }
+    public void setOverallRate(int overallRate) { this.overallRate = overallRate; }
 
     public int getOverallRate() { return overallRate; }
 
     @JsonSetter("comment")
-    private void setComment(String comment) { this.comment = comment; }
+    public void setComment(String comment) { this.comment = comment; }
 
-    private String getComment() { return this.comment; }
+    public String getComment() { return this.comment; }
 
 }

@@ -1,11 +1,14 @@
 package com.mizdooni.repository;
 
+import com.mizdooni.entity.TableEntity;
 import com.mizdooni.entity.TableReservationEntity;
 import com.mizdooni.entity.UserEntity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -50,6 +53,20 @@ public class TableReservationRepository {
         return tableReservations.stream()
                 .filter(tableReservation -> tableReservation.getUserId() == user.getId())
                 .collect(Collectors.toList());
+    }
+
+    public Map<TableEntity, List<TableReservationEntity>> getTablesReservationsGroupByTables(
+            List<TableEntity> tableEntities, LocalDate date) {
+        List<Integer> tableIds = tableEntities.stream()
+                .map(TableEntity::getId)
+                .collect(Collectors.toList());
+
+        return tableReservations.stream()
+                .filter(tableReservationEntity ->
+                        tableIds.contains(tableReservationEntity.getTableId()) &&
+                        tableReservationEntity.getStatus().equals(TableReservationEntity.STATUS_RESERVED) &&
+                        tableReservationEntity.getReservationDate().toLocalDate().isEqual(date))
+                .collect(Collectors.groupingBy(TableReservationEntity::getTable));
     }
 
     public void persist(TableReservationEntity tableReservationEntity) {

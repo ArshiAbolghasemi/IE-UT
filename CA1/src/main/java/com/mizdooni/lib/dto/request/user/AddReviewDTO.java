@@ -8,13 +8,13 @@ public class AddReviewDTO {
 
     private String restaurantName;
 
-    private int foodRate;
+    private double foodRate;
 
-    private int serviceRate;
+    private double serviceRate;
 
-    private int ambianceRate;
+    private double ambianceRate;
 
-    private int overallRate;
+    private double overallRate;
 
     private String comment;
 
@@ -29,24 +29,24 @@ public class AddReviewDTO {
     public String getRestaurantName() { return this.restaurantName; }
 
     @JsonSetter("foodRate")
-    public void setFoodRate(int foodRate) { this.foodRate = foodRate; }
+    public void setFoodRate(double foodRate) { this.foodRate = foodRate; }
 
-    public int getFoodRate() { return foodRate; }
+    public double getFoodRate() { return foodRate; }
 
     @JsonSetter("serviceRate")
-    public void setServiceRate(int serviceRate) { this.serviceRate = serviceRate; }
+    public void setServiceRate(double serviceRate) { this.serviceRate = serviceRate; }
 
-    public int getServiceRate() { return this.serviceRate; }
+    public double getServiceRate() { return this.serviceRate; }
 
     @JsonSetter("ambianceRate")
-    public void setAmbianceRate(int ambianceRate) { this.ambianceRate = ambianceRate; }
+    public void setAmbianceRate(double ambianceRate) { this.ambianceRate = ambianceRate; }
 
-    public int getAmbianceRate() { return this.ambianceRate; }
+    public double getAmbianceRate() { return this.ambianceRate; }
 
     @JsonSetter("overallRate")
-    public void setOverallRate(int overallRate) { this.overallRate = overallRate; }
+    public void setOverallRate(double overallRate) { this.overallRate = overallRate; }
 
-    public int getOverallRate() { return overallRate; }
+    public double getOverallRate() { return overallRate; }
 
     @JsonSetter("comment")
     public void setComment(String comment) { this.comment = comment; }

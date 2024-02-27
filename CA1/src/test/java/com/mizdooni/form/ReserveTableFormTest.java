@@ -163,4 +163,28 @@ public class ReserveTableFormTest {
         this.reserveTableForm.execute(args);
     }
 
+    @Test(expected = RuntimeException.class)
+    public void testReservedAlreadyReservedTable() {
+        RestaurantEntity restaurant = this.restaurantRepository.getRestaurantByName("restaurant");
+        TableEntity newTable = new TableEntity()
+                .setTableNumber(4)
+                .setSeatsNumber(3)
+                .setRestaurantId(restaurant.getId());
+        this.tableRepository.persist(newTable);
+
+        String[] args = {
+                "{\"username\": \"client\", \"restaurantName\": \"restaurant\", \"tableNumber\": \"4\", " +
+                        "\"datetime\": \"2024-03-27 21:00\"}",
+        };
+
+        this.reserveTableForm.execute(args);
+
+        String[] args2 = {
+                "{\"username\": \"client\", \"restaurantName\": \"restaurant\", \"tableNumber\": \"4\", " +
+                        "\"datetime\": \"2024-03-27 21:00\"}",
+        };
+
+        this.reserveTableForm.execute(args2);
+    }
+
 }

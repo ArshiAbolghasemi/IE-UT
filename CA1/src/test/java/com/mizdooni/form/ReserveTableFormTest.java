@@ -142,4 +142,15 @@ public class ReserveTableFormTest {
         this.reserveTableForm.execute(args);
     }
 
+    @Test(expected = RuntimeException.class)
+    public void testUndefinedRestaurant() {
+        String[] args = {
+                "{\"username\": \"client\", \"restaurantName\": \"restaurant1\", \"tableNumber\": \"1\", " +
+                        "\"datetime\": \"2024-03-27 21:00\"}",
+        };
+
+
+        this.reserveTableForm.execute(args);
+    }
+
 }

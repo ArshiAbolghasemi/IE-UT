@@ -35,6 +35,12 @@ public class RestaurantAddressRepository {
         return restaurantAddressEntity.orElse(null);
     }
 
+    public RestaurantAddressEntity getRestaurantAddress(int restaurantId) {
+        return restaurantAddresses.stream()
+                .filter(restaurantAddress -> restaurantAddress.getId() == restaurantId)
+                .findFirst().orElse(null);
+    }
+
     public void persist(RestaurantAddressEntity restaurantAddress) {
         restaurantAddress.setId(this.generateId());
         restaurantAddresses.add(restaurantAddress);

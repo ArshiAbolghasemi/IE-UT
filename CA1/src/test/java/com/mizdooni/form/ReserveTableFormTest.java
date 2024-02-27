@@ -106,13 +106,13 @@ public class ReserveTableFormTest {
 
         reserveTableForm.execute(args);
 
-        RestaurantEntity restaurant = RestaurantRepository.getInstance().getRestaurantByName("restaurant");
-        TableEntity table = TableRepository.getInstance().getTable(1, restaurant.getId());
-        TableReservationEntity tableReservation = TableReservationRepository.getInstance()
+        RestaurantEntity restaurant = this.restaurantRepository.getRestaurantByName("restaurant");
+        TableEntity table = this.tableRepository.getTable(1, restaurant.getId());
+        TableReservationEntity tableReservation = this.tableReservationRepository
                 .getTableReservation(table.getId(),
                         LocalDateTime.parse("2024-03-27 21:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")),
                         TableReservationEntity.STATUS_RESERVED);
-        UserEntity client = UserRepository.getInstance().getUserByUsername("client");
+        UserEntity client = this.userRepository.getUserByUsername("client");
 
         assertEquals(tableReservation.getTableId(), table.getId());
         assertEquals(tableReservation.getUserId(), client.getId());

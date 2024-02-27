@@ -10,6 +10,7 @@ import com.mizdooni.form.user.AddNewUserForm;
 import com.mizdooni.lib.command.Command;
 import com.mizdooni.lib.command.Form;
 import com.mizdooni.lib.dto.response.CommandResponseDTO;
+import com.mizdooni.view.restaurant.SearchRestaurantByNameView;
 import com.mizdooni.view.user.ShowUserTableReservationHistoryView;
 
 import java.util.HashMap;
@@ -30,7 +31,8 @@ public class CommandListener {
                 .register("addTable", AddNewTableForm.class.getName())
                 .register("reserveTable", ReserveTableForm.class.getName())
                 .register("cancelReservation", CancelTableReservationForm.class.getName())
-                .register("showReservationHistory", ShowUserTableReservationHistoryView.class.getName());
+                .register("showReservationHistory", ShowUserTableReservationHistoryView.class.getName())
+                .register("searchRestaurantsByName", SearchRestaurantByNameView.class.getName());
     }
 
     private CommandListener register(String commandName, String commandClass) throws RuntimeException {

@@ -44,6 +44,12 @@ public class RestaurantRepository {
                 .collect(Collectors.toList());
     }
 
+    public List<RestaurantEntity> searchByType(String type) {
+        return restaurants.stream()
+                .filter(restaurant -> restaurant.getType().equals(type))
+                .collect(Collectors.toList());
+    }
+
     public void persist(RestaurantEntity restaurantEntity) {
         restaurantEntity.setId(this.generateId());
         restaurants.add(restaurantEntity);

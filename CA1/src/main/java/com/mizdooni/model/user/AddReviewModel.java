@@ -41,7 +41,8 @@ public class AddReviewModel {
                 .setFoodRate(addReviewDTO.getFoodRate())
                 .setAmbianceRate(addReviewDTO.getAmbianceRate())
                 .setServiceRate(addReviewDTO.getServiceRate())
-                .setOverallRate(addReviewDTO.getOverallRate());
+                .setOverallRate(addReviewDTO.getOverallRate())
+                .setComment(addReviewDTO.getComment());
 
         this.reviewRepository.persist(reviewEntity);
     }

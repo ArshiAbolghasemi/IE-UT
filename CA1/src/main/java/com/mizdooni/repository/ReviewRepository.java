@@ -21,4 +21,11 @@ public class ReviewRepository {
         return INSTANCE;
     }
 
+    public void persist(ReviewEntity reviewEntity) {
+        reviewEntity.setId(this.generateId());
+        reviews.add(reviewEntity);
+    }
+
+    private int generateId() { return reviews.size() + 1; }
+
 }

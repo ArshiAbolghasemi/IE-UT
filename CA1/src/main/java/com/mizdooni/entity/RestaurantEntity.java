@@ -1,5 +1,7 @@
 package com.mizdooni.entity;
 
+import com.mizdooni.repository.RestaurantAddressRepository;
+
 import java.time.LocalTime;
 
 public class RestaurantEntity {
@@ -75,5 +77,9 @@ public class RestaurantEntity {
     }
 
     public int getRestaurantAddressId() { return this.restaurantAddressId; }
+
+    public RestaurantAddressEntity getRestaurantAddress() {
+        return RestaurantAddressRepository.getInstance().getRestaurantAddress(this.getRestaurantAddressId());
+    }
 
 }

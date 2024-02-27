@@ -110,4 +110,12 @@ public class AddReviewFormTest {
         this.addReviewForm.execute(args);
     }
 
+    @Test(expected = RuntimeException.class)
+    public void testUndefinedRestaurant() {
+        String[] args = {"{\"username\": \"client\", \"restaurantName\": \"restaurant1\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 4.5, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
 }

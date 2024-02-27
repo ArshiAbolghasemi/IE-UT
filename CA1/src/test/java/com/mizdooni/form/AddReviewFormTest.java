@@ -1,15 +1,20 @@
 package com.mizdooni.form;
 
 import com.mizdooni.entity.*;
-import com.mizdooni.form.restaurant.table.ReserveTableForm;
+import com.mizdooni.form.user.AddReviewForm;
 import com.mizdooni.repository.*;
 import com.mizdooni.service.PasswordService;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.time.LocalTime;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class AddReviewFormTest {
+
+    private AddReviewForm addReviewForm;
 
     private AddressRepository addressRepository;
 
@@ -19,12 +24,16 @@ public class AddReviewFormTest {
 
     private RestaurantRepository restaurantRepository;
 
+    private ReviewRepository reviewRepository;
+
     @Before
     public void setup() {
+        this.addReviewForm = new AddReviewForm();
         this.userRepository = UserRepository.getInstance();
         this.restaurantRepository = RestaurantRepository.getInstance();
         this.addressRepository = AddressRepository.getInstance();
         this.restaurantAddressRepository = RestaurantAddressRepository.getInstance();
+        this.reviewRepository = ReviewRepository.getInstance();
         this.createRequiredEntities();
     }
 
@@ -67,9 +76,30 @@ public class AddReviewFormTest {
 
     @After
     public void tearDown() {
+        this.addReviewForm = null;
         this.userRepository = null;
         this.restaurantRepository = null;
         this.restaurantAddressRepository = null;
         this.addressRepository = null;
+        this.reviewRepository = null;
     }
+
+    @Test
+    public void testSuccessStory() {
+        String[] args = {"{\"username\": \"client\", \"restaurantName\": \"restaurant\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 4.5, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+
+        UserEntity user = this.userRepository.getUserByUsername("client");
+        RestaurantEntity restaurant = this.restaurantRepository.getRestaurantByName("restaurant");
+        ReviewEntity reviewEntity = this.reviewRepository.getReviewByUserIdAndRestaurantId(user.getId(), restaurant.getId());
+        assertNotNull(reviewEntity);
+        assertEquals(reviewEntity.getFoodRate(), 4.5, 0.0);
+        assertEquals(reviewEntity.getServiceRate(), 3.0, 0.0);
+        assertEquals(reviewEntity.getAmbianceRate(), 4.5, 0.0);
+        assertEquals(reviewEntity.getOverallRate(), 4, 0.0);
+        assertEquals(reviewEntity.getComment(), "not bad!");
+    }
+
 }

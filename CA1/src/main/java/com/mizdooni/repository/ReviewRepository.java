@@ -21,6 +21,16 @@ public class ReviewRepository {
         return INSTANCE;
     }
 
+    public ReviewEntity getReviewByUserIdAndRestaurantId(int userId, int restaurantId) {
+        return reviews.stream()
+                .filter(reviewEntity ->
+                        reviewEntity.getUserId() == userId &&
+                        reviewEntity.getRestaurantId() == restaurantId
+                )
+                .findFirst()
+                .orElse(null);
+    }
+
     public void persist(ReviewEntity reviewEntity) {
         reviewEntity.setId(this.generateId());
         reviews.add(reviewEntity);

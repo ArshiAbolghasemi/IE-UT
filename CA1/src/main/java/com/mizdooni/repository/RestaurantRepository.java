@@ -2,7 +2,9 @@ package com.mizdooni.repository;
 
 import com.mizdooni.entity.RestaurantEntity;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class RestaurantRepository {
 
@@ -34,6 +36,12 @@ public class RestaurantRepository {
                 .filter(restaurant -> restaurant.getId() == restaurantId)
                 .findFirst()
                 .orElse(null);
+    }
+
+    public List<RestaurantEntity> searchByName(String name) {
+        return restaurants.stream()
+                .filter(restaurant -> restaurant.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
     }
 
     public void persist(RestaurantEntity restaurantEntity) {

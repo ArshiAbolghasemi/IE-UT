@@ -96,5 +96,28 @@ public class ReserveTableFormTest {
         this.restaurantAddressRepository = null;
         this.addressRepository = null;
     }
+    @Test
+    public void testSuccessStory() {
+        String[] args = {
+                "{\"username\": \"client\", \"restaurantName\": \"restaurant\", \"tableNumber\": \"1\", " +
+                        "\"datetime\": \"2024-03-27 21:00\"}",
+        };
+
+        reserveTableForm.execute(args);
+
+        RestaurantEntity restaurant = RestaurantRepository.getInstance().getRestaurantByName("restaurant");
+        TableEntity table = TableRepository.getInstance().getTable(1, restaurant.getId());
+        TableReservationEntity tableReservation = TableReservationRepository.getInstance()
+                .getTableReservation(table.getId(),
+                        LocalDateTime.parse("2024-03-27 21:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")),
+                        TableReservationEntity.STATUS_RESERVED);
+        UserEntity client = UserRepository.getInstance().getUserByUsername("client");
+
+        assertEquals(tableReservation.getTableId(), table.getId());
+        assertEquals(tableReservation.getUserId(), client.getId());
+        assertEquals(tableReservation.getStatus(), TableReservationEntity.STATUS_RESERVED);
+        assertEquals(tableReservation.getReservationDate(),
+                LocalDateTime.parse("2024-03-27 21:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+    }
 
 }

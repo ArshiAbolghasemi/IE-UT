@@ -102,4 +102,12 @@ public class AddReviewFormTest {
         assertEquals(reviewEntity.getComment(), "not bad!");
     }
 
+    @Test(expected = RuntimeException.class)
+    public void testUndefinedUser() {
+        String[] args = {"{\"username\": \"client1\", \"restaurantName\": \"restaurant\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 4.5, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
 }

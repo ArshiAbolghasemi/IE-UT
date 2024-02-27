@@ -121,4 +121,14 @@ public class ReserveTableFormTest {
                 LocalDateTime.parse("2024-03-27 21:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
     }
 
+    @Test(expected =  RuntimeException.class)
+    public void testManagerReservedTableStory() {
+        String[] args = {
+                "{\"username\": \"manager\", \"restaurantName\": \"restaurant\", \"tableNumber\": \"1\", " +
+                        "\"datetime\": \"2024-03-27 21:00\"}",
+        };
+
+        this.reserveTableForm.execute(args);
+    }
+
 }

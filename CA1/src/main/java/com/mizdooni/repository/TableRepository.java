@@ -1,9 +1,12 @@
 package com.mizdooni.repository;
 
+import com.mizdooni.entity.RestaurantEntity;
 import com.mizdooni.entity.TableEntity;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TableRepository {
 
@@ -39,6 +42,12 @@ public class TableRepository {
                 .findFirst();
 
         return tableEntity.orElse(null);
+    }
+
+    public List<TableEntity> getRestaurantTables(RestaurantEntity restaurant) {
+        return tables.stream()
+                .filter(table -> table.getRestaurantId() == restaurant.getId())
+                .collect(Collectors.toList());
     }
 
     public void persist(TableEntity table) {

@@ -96,6 +96,7 @@ public class ReserveTableFormTest {
         this.restaurantAddressRepository = null;
         this.addressRepository = null;
     }
+
     @Test
     public void testSuccessStory() {
         String[] args = {

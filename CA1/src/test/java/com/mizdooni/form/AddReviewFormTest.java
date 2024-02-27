@@ -126,4 +126,36 @@ public class AddReviewFormTest {
         this.addReviewForm.execute(args);
     }
 
+    @Test(expected = RuntimeException.class)
+    public void testInvalidFoodRate() {
+        String[] args = {"{\"username\": \"manager\", \"restaurantName\": \"restaurant1\", \"foodRate\": 6, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 4.5, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testInvalidServiceRate() {
+        String[] args = {"{\"username\": \"manager\", \"restaurantName\": \"restaurant1\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": -1, \"ambianceRate\": 4.5, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testInvalidAmbianceRate() {
+        String[] args = {"{\"username\": \"manager\", \"restaurantName\": \"restaurant1\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 7.4, \"overallRate\": 4, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testInvalidOverallRate() {
+        String[] args = {"{\"username\": \"manager\", \"restaurantName\": \"restaurant1\", \"foodRate\": 4.5, " +
+                "\"serviceRate\": 3, \"ambianceRate\": 4.5, \"overallRate\": 5.1, \"comment\": \"not bad!\"}"};
+
+        this.addReviewForm.execute(args);
+    }
+
 }

@@ -39,12 +39,6 @@ public class ShowAvailableTablesView implements View {
             Map<TableEntity, List<LocalDateTime>> availableTables = this.getAvailableTables(reservationsPerTable,
                     availableTimeScopes);
 
-            for (Map.Entry<TableEntity, List<LocalDateTime>> entry : availableTables.entrySet()) {
-                System.out.println("Key: " + entry.getKey().getTableNumber());
-                System.out.println("value: " + entry.getValue());
-                System.out.println("size: " + entry.getValue().size());
-            }
-
             return new CommandResponseDTO()
                     .put("data", new CommandResponseDTO()
                             .put("availableTables", availableTables.entrySet().stream()

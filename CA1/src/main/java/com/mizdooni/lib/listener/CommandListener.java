@@ -23,8 +23,16 @@ public class CommandListener {
 
     private final Map<String, String> commands = new HashMap<>();
 
-    public CommandListener() {
-        this.init();
+    private static CommandListener INSTANCE;
+
+    private CommandListener() { this.init(); }
+
+    public static CommandListener getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new CommandListener();
+        }
+
+        return INSTANCE;
     }
 
     private void init() {

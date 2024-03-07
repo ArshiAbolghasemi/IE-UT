@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mvn compile exec:java -Dexec.mainClass="com.mizdooni.Main"
+mvn test exec:java -Dexec.mainClass="com.mizdooni.Main"

@@ -7,6 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>CA2 Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <build>
+    <finalName>com.ut.mizdooni</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -23,7 +28,4 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>CA2</finalName>
-  </build>
 </project>

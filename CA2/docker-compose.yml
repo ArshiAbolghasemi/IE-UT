@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: .
+    image: tomcat:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/usr/local/tomcat/webapps/
+    networks:
+      - mizdooni
+
+networks:
+  mizdooni:
+    driver: bridge

@@ -1,6 +1,15 @@
 version: '3.3'
 services:
-  web:
+  mizdooni:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - tomcat
+    networks:
+      - mizdooni_network
+
+  tomcat:
     build:
       context: .
     image: tomcat:latest
@@ -9,8 +18,8 @@ services:
     volumes:
       - ./target:/usr/local/tomcat/webapps/
     networks:
-      - mizdooni
+      - mizdooni_network
 
 networks:
-  mizdooni:
+  mizdooni_network:
     driver: bridge

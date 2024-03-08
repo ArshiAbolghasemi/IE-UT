@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "username": "client",
+    "password": "2a5f9e2bff58827ee55acd2becc4c00d41034f007e1dbd3a3651acda335ac1953033bfd0cc2b0ac844206a892d5ae3f6",
+    "mail": "client.example.com",
+    "role": "client",
+    "address_id": 1
+  },
+  {
+    "id": 2,
+    "username": "manage",
+    "password": "09234f3334e364816a0848091c327e83d74df9b3bcf1f27f3cf903f77bcf8aebfc008667405902b9d78f66908d5163f9",
+    "mail": "manager.example.com",
+    "role": "manager",
+    "address_id": 2
+  }
+]

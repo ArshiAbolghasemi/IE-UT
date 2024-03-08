@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "country": "Spain",
+    "city": "Barcelona",
+    "street": "Las Ramblas"
+  },
+  {
+    "id": 2,
+    "country": "France",
+    "city": "Paris",
+    "street": "Champs-Élysées avenue"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Le Servan",
+    "manager_user_id": 2,
+    "type": "Casual dining",
+    "description": "French-Asian dishes like blood sausage wontons & ginger pork belly, in a space with a vintage vibe.",
+    "start_time": "09:00",
+    "end_time": "23:00",
+    "restaurant_address_id": 2
+  },
+  {
+    "id": 2,
+    "name": "La Boqueria",
+    "manager_user_id": 2,
+    "type": "steak & seafood",
+    "description": "Tapas, paella, steak & seafood, plus Catalan wines, in a stylish place with plants & colorful tiles.",
+    "start_time": "10:00",
+    "end_time": "23:30",
+    "restaurant_address_id": 1
+  }
+]

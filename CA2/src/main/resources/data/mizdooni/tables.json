@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "table_number": 1,
+    "restaurant_id": 1,
+    "seats_number": 2
+  },
+  {
+    "id": 2,
+    "table_number": 2,
+    "restaurant_id": 1,
+    "seats_number": 4
+  },
+  {
+    "id": 3,
+    "table_number": 3,
+    "restaurant_id": 1,
+    "seats_number": 4
+  },
+  {
+    "id": 4,
+    "table_number": 4,
+    "restaurant_id": 1,
+    "seats_number": 2
+  },
+  {
+    "id": 5,
+    "table_number": 1,
+    "restaurant_id": 2,
+    "seats_number": 2
+  },
+  {
+    "id": 6,
+    "table_number": 2,
+    "restaurant_id": 2,
+    "seats_number": 6
+  }
+]

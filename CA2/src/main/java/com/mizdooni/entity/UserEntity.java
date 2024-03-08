@@ -54,8 +54,6 @@ public class UserEntity {
     public String getRole() { return this.role; }
 
     public UserEntity setRole(String role) {
-        (new RoleValidator(role)).validate();
-
         this.role = role;
         return this;
     }

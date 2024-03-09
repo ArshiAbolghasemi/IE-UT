@@ -1,25 +1,10 @@
 version: '3.3'
 services:
-  mizdooni:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - tomcat
-    networks:
-      - mizdooni_network
-
   tomcat:
     build:
       context: .
-    image: tomcat:latest
+    image: tomcat:9
     ports:
       - "8080:8080"
     volumes:
       - ./target/com.ut.mizdooni.war:/usr/local/tomcat/webapps/com.ut.mizdooni.war
-    networks:
-      - mizdooni_network
-
-networks:
-  mizdooni_network:
-    driver: bridge

@@ -1,6 +1,8 @@
 FROM tomcat:latest
 
 ADD ./target/com.ut.mizdooni.war /usr/local/tomcat/webapps/
+RUN mv /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+
 
 EXPOSE 8080
 

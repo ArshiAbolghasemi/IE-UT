@@ -3,7 +3,7 @@ services:
   tomcat:
     build:
       context: .
-    image: tomcat:9
+    image: tomcat:latest
     ports:
       - "8080:8080"
     volumes:

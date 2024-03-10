@@ -1,9 +1,14 @@
 FROM tomcat:latest
 
-ADD ./target/com.ut.mizdooni.war /usr/local/tomcat/webapps/
-RUN mv /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+ENV WAR_FILE=com.ut.mizdooni.war
+ENV TOMCAT_PATH=/usr/local/tomcat/
+ENV WEBAPSS_PATH=${TOMCAT_PATH}/webapps/
 
+ADD ./target/${WAR_FILE} ${WEBAPSS_PATH}
+
+RUN chmod -R  755 ${WEBAPSS_PATH}${WAR_FILE}
+RUN mv ${TOMCAT_PATH}/webapps.dist/* ${WEBAPSS_PATH}
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]

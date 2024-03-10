@@ -7,4 +7,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./target/com.ut.mizdooni.war:/usr/local/tomcat/webapps/com.ut.mizdooni.war
+      - ./target/ROOT.war:/usr/local/tomcat/webapps/ROOT.war

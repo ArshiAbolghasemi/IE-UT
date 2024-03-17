@@ -13,15 +13,15 @@
     <!--styles-->
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/text_color.css">
+    <link rel="stylesheet" href="../assets/css/pages/home_page.css">
 </head>
 <body>
     <header class="bg-white">
         <div class="container-fluid header">
             <div class="row align-items-center">
                 <div class="header__logo">
-                    <img src="../assets/images/header/logo/mizdoonit_logo.png" alt="Mizdooni Logo" 
-                        class="img-fluid">
-                    </img>    
+                    <img src="../assets/images/header/logo/mizdoonit_logo.png" 
+                        alt="Mizdooni Logo" class="img-fluid">    
                 </div>
                 <div class="header__text">
                     <p class="text-deep_carmine_pink">
@@ -39,6 +39,35 @@
         </div>
     </header>
 
-
+    <div class="main">
+        <div class="main__search">
+            <div class="main__searchicon">
+                <img src="../assets/images/pages/home/mizdooni_logo.png" 
+                    alt="Mizdooni Logo" class="img-fluid">
+            </div>
+            <div class="main__searchbox">
+                <button type="button" class="btn search-location" 
+                    data-toggle="dropdown">
+                    <span class="text-black">
+                        Location
+                    </span>
+                    <img src="../assets/images/util/dropdown_button.png" alt=""dropdown_button
+                        class="img-fluid" id="dropdown_button">
+                </button>
+                <button type="button" class="btn search-resturant" 
+                    data-toggle="dropdown">
+                    <span class="text-black">
+                        Restaurant
+                    </span>
+                    <img src="../assets/images/util/dropdown_button.png" alt=""dropdown_button
+                        class="img-fluid" id="dropdown_button">
+                </button>
+                <input class="input__restaurant" placeholder="Type  Restaurant...">
+                <button type="button" class="btn search-btn">
+                    <span class="text-white">search</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

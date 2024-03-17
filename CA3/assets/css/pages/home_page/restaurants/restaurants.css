@@ -1,0 +1,22 @@
+@import url(./items.css);
+
+.restaurants {
+    position: absolute;
+    width: 1376px;
+    height: 614px;
+    top: 969px;
+    left: 231px;
+}
+
+.restaurants .title {
+    width: 203px;
+    height: 19px;
+    top: 969px;
+    left: 231px; 
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;    
+}

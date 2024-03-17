@@ -1,0 +1,100 @@
+.restaurants .cards__container {
+    margin-top: 20px;
+    width: 1376px;
+    height: 250px;
+    top: 1011px;
+    left: 231px;    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.restaurants .cards__container .card__item {
+    width: 200px;
+    height: 250px;
+    top: 1011px;
+    left: 231px;    
+}
+
+.restaurants .cards__container .card__item .card__images {
+    width: 200px;
+    height: 149px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.restaurants .cards__container .card__item .card__tag {
+    position: absolute;
+    width: 82px;
+    height: 20px;
+    top: 50px;
+    border-radius: 0px 12px 12px 0px;
+    background: #FFF6F7;    
+}
+
+.restaurants .cards__container .card__item .card__tag .rate {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 62px;
+    height: 9px;
+    margin-top: 5.5px;
+    margin-left: 10px;
+}
+
+.restaurants .cards__container .card__item .restaurant-name {
+    width: 107px;
+    height: 17px;
+    margin-top: 5px;
+    margin-left: 13px;  
+    font-family: Spline Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;          
+}
+
+.restaurants .cards__container .card__item .count-reviews {
+    width: 62px;
+    height: 12px;
+    margin-top: 5px;
+    margin-left: 13px; 
+    font-family: Spline Sans;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.restaurants .cards__container .card__item .restaurant-type {
+    width: 96px;
+    height: 12px;
+    margin-top: 6px;
+    margin-left: 13px;
+    font-family: Spline Sans;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.restaurants .cards__container .card__item .restaurant-location {  
+    display: inline; 
+    width: 45px;
+    height: 12px;
+    margin-top: 6px;
+    margin-left: 13px;    
+}
+
+.restaurants .cards__container .card__item .restaurant-location span {  
+    font-family: Spline Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;    
+}

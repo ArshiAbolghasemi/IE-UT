@@ -1,7 +1,8 @@
 .header {
+    position: relative;
     width: 1920px;
     height: 100px;
-    /* top: -3px; */
+    top: -3px;
 }
 
 .header__logo {

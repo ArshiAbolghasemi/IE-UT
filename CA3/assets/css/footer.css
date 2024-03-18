@@ -1,0 +1,23 @@
+footer {
+    position: absolute;
+    width: 1920px;
+    height: 45px; 
+    bottom: 0;
+    padding: 15px 0;
+    background-color: #ED3545;   
+}
+
+footer div {
+    position: absolute;
+    width: 312px;
+    height: 17px;
+    top: 14px;
+    left: 818px;
+    font-family: Spline Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;   
+    margin: 0 auto;    
+}

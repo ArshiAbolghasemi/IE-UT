@@ -4,14 +4,14 @@
     position: absolute;
     width: 1376px;
     height: 614px;
-    top: 890px;
+    margin-top: 25px;
     left: 231px;
 }
 
 .restaurants .title {
     width: 203px;
     height: 19px;
-    top: 969px;
+    margin-top: 5px;
     left: 231px; 
     font-family: Spline Sans;
     font-size: 16px;

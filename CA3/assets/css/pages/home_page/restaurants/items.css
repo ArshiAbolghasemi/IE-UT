@@ -1,5 +1,5 @@
 .restaurants .cards__container {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 1376px;
     height: 250px;
     top: 1011px;
@@ -11,10 +11,11 @@
 }
 
 .restaurants .cards__container .card__item {
+    position: relative;
     width: 200px;
     height: 250px;
-    top: 1011px;
-    left: 231px;  
+    top: 2px;
+    left: 0px;  
     box-shadow: 0px 0px 2px 0px #00000040;  
 }
 
@@ -28,7 +29,7 @@
     position: absolute;
     width: 82px;
     height: 20px;
-    top: 50px;
+    top: 10px;
     border-radius: 0px 12px 12px 0px;
     background: #FFF6F7;    
 }

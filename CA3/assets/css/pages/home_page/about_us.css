@@ -11,3 +11,37 @@
     width: 474px;
     height: 439px;
 }
+
+.about-us .title {
+    position: absolute;
+    width: 170px;
+    height: 28px;
+    top: 33px;
+    left: 681px; 
+}
+
+.about-us .title span {
+    font-family: Spline Sans;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.about-us .description {
+    position: absolute;
+    width: 711px;
+    height: 304px;
+    top: 87px;
+    left: 681px;    
+}
+
+.about-us .description p {
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: justified;    
+}

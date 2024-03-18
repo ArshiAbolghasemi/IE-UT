@@ -1,0 +1,13 @@
+.about-us {
+    position: absolute;
+    width: 1392px;
+    height: 439px;
+    top: 1630px;
+    left: 279px;    
+}
+
+.about-us .banner {
+    position: absolute;
+    width: 474px;
+    height: 439px;
+}

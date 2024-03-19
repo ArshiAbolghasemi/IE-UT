@@ -1,7 +1,7 @@
 .restaurant__dashboard {
     position: absolute;
     width: 1918px;
-    height: 678px;
+    height: var(--dashboard-hight);
     top: 139px;
     gap: 0px;
     border: 1px 0px 0px 0px;
@@ -12,12 +12,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .restaurant__dashboard > .reservation__list {
     width: 599px;
-    height: 675px;
+    height: var(--dashboard-hight);
     opacity: 0px; 
     background: #FFF6F7;   
 }
@@ -65,7 +65,7 @@
 }
 
 .restaurant__dashboard > .reservation__list > .reservations > table tbody tr {
-    height: 53px;
+    height: px;
 }
 
 .restaurant__dashboard > .reservation__list > .reservations > table .time {
@@ -92,6 +92,6 @@
 
 .restaurant__dashboard > .add__table {
     width: 1308px;
-    height: 675px;
+    height: var(--dashboard-hight);
     background-color: #FFF6F7;
 }

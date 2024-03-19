@@ -1,6 +1,10 @@
 @import url(./resturant_info.css);
 @import url(./restaurant_dashboard.css);
 
-body {
-    background-color: #ED3545;
+:root {
+    --dashboard-hight: calc(100vh - 184px);
+}
+
+footer {
+    top: calc(var(--dashboard-hight));
 }

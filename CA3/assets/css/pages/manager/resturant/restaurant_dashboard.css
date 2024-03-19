@@ -1,0 +1,29 @@
+.restaurant__dashboard {
+    position: absolute;
+    width: 1918px;
+    height: 678px;
+    top: 139px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;    
+    background-color: #ED3545;
+    border: 1px solid #FFF6F7;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant__dashboard > .reservation__list {
+    width: 599px;
+    height: 675px;
+    opacity: 0px; 
+    background: #FFFFFF;   
+}
+
+.restaurant__dashboard > .add__table {
+    width: 1308px;
+    height: 675px;
+    background-color: #FFFFFF;
+}

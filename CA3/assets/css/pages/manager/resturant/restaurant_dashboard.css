@@ -53,6 +53,43 @@
     line-height: 14.22px;
 }
 
+.restaurant__dashboard > .reservation__list > .reservations {
+    width: 599px;
+    height: 381px;
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table tbody tr {
+    height: 53px;
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table .time {
+    width: 91px;
+    height: 17px;
+    margin-left: 31px;
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table .customer {
+    width: 108px;
+    height: 19px;
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table .table-no {
+    width: 46px;
+    height: 17px; 
+    margin-left: 55px; 
+}
+
+.restaurant__dashboard > .reservation__list > .reservations > table tbody .passed {
+    text-decoration: line-through;
+}
+
+
 .restaurant__dashboard > .add__table {
     width: 1308px;
     height: 675px;

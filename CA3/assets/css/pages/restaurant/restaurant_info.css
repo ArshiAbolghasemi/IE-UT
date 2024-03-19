@@ -25,3 +25,166 @@
     border-bottom-right-radius: var(--border-radius-restaurant-img);
     
 }
+
+.restaurant-info {
+    position: relative;
+    width: 672px;
+    height: 324px;
+    margin-top: 78px;
+    left: 250px;
+    gap: 0px;
+    border-radius: 12px;
+    border: 1px;
+    opacity: 0px; 
+}
+
+.restaurant-info > .name {
+    position: absolute;
+    width: 382.49px;
+    height: 57px;
+    font-family: Spline Sans;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56.88px;
+    text-align: left;    
+}
+
+.restaurant-info > .status {
+    position: absolute;
+    width: 90.62px;
+    height: 33px;
+    margin-top: 6px;
+    margin-left: 571.38px;
+    border-radius: 12px 12px 12px 12px;
+    background-color: #2B9407;
+}
+
+.restaurant-info > .info {
+    position: absolute;
+    width: 672px;
+    height: 247px;
+    margin-top: 77px;
+}
+
+.restaurant-info > .info > .work-time {
+    position: absolute;
+    width: 242.53px;
+    height: 25px;
+    display: inline-block;
+}
+
+.restaurant-info > .info > .work-time > img {
+    position: relative;
+    width: 24.13px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.restaurant-info > .info > .work-time > span {
+    position: relative;
+    width: 207.54px;
+    height: 24px;
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23.7px;
+    text-align: left;    
+    vertical-align: middle;  
+}
+
+.restaurant-info > .info > .reviews {
+    position: absolute;
+    width: 163.26px;
+    height: 24px; 
+    display: inline-block; 
+    margin-left: 288.26px;
+}
+
+.restaurant-info > .info > .reviews > img {
+    position: relative;
+    width: 20.59px;
+    height: 22px;
+    vertical-align: middle; 
+}
+
+.restaurant-info > .info > .reviews > span {
+    position: relative;
+    width: 139px;
+    height: 24px;
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23.7px;
+    text-align: left;
+    vertical-align: middle;    
+}
+
+.restaurant-info > .info > .type {
+    position: absolute;
+    width: 77.48px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 503.52px;
+}
+
+.restaurant-info > .info > .type > img {
+    position: relative;
+    width: 10.29px;
+    height: 17px;
+    vertical-align: middle;     
+}
+
+.restaurant-info > .info > .type > span {
+    position: relative;
+    width: 61px;
+    height: 24px;
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23.7px;
+    text-align: left;    
+    vertical-align: middle;    
+}
+
+.restaurant-info > .info > .location {
+    position: absolute;
+    width: 271.13px;
+    height: 16px;
+    margin-top: 35px;
+}
+
+.restaurant-info > .info > .location > img {
+    position: relative;
+    width: 10.55px;
+    height: 14px;
+    vertical-align: middle;    
+}
+
+.restaurant-info > .info > .location > span {
+    position: relative;
+    width: 251.73px;
+    height: 10.18px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.96px;
+    text-align: left;    
+    vertical-align: middle;    
+}
+
+.restaurant-info > .info > .description {
+    position: absolute;
+    width: 669.12px;
+    height: 161px;
+    margin-top: 65px;
+}
+
+.restaurant-info > .info > .description > span {
+    width: 669.12px;
+    height: 161px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.96px;
+    text-align: justified;      
+}

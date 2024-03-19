@@ -19,11 +19,42 @@
     width: 599px;
     height: 675px;
     opacity: 0px; 
-    background: #FFFFFF;   
+    background: #FFF6F7;   
+}
+
+.restaurant__dashboard > .reservation__list > .rl__header {
+    width: 599px;
+    height: 50px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    gap: 0px;
+    font-family: Spline Sans;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant__dashboard > .reservation__list > .rl__header > .rl__title {
+    width: 120px;
+    height: 19px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.96px;
+    margin-left: 31px;
+}
+
+.restaurant__dashboard > .reservation__list > .rl__header > .rl__hint {
+    width: 191px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14.22px;
 }
 
 .restaurant__dashboard > .add__table {
     width: 1308px;
     height: 675px;
-    background-color: #FFFFFF;
+    background-color: #FFF6F7;
 }

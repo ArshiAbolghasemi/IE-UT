@@ -1,0 +1,97 @@
+.reservations__table {
+    position: absolute;
+    width: 1426px;
+    height: 328px;
+    top: 212px;
+    left: 247px;
+    border-radius: 12px;        
+}
+
+.reservations__table table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.reservations__table tbody > tr:not(:last-child) {
+    border-bottom: 1px solid #D9D9D9; 
+}
+
+.reservations__table thead, tbody {
+    position: relative;
+    width: 1425px;
+    height: 58px;
+    gap: 0px;
+    opacity: 0px;    
+    font-family: Spline Sans;  
+}
+
+.reservations__table thead {
+    border-radius: 12px 12px 0px 0px;  
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;   
+    background-color: #F5F5F5; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.reservations__table th span {
+    position: absolute;
+    width: 155px;
+    height: 24px;
+    margin: 15px 0 0 21px;
+    gap: 0px;
+    opacity: 0px;    
+}
+
+.reservations__table tbody > tr {
+    height: 70px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: center;     
+}
+
+.reservations__table .in_progress { 
+    color: #2B9407;
+}
+
+.reservations__table .passed {
+    color: #D9D9D9;
+}
+
+.reservations__table .time {
+    width: 127px;
+    height: 21px; 
+}
+
+.reservations__table .restaurant__name {
+    width: 90px;
+    height: 19px;   
+    color: #ED3545;
+    margin-left: 10px;
+}
+
+.reservations__table .table__no {
+    width: 60px;
+    height: 19px;              
+}
+
+.reservations__table .seats__no {
+    width: 53px;
+    height: 19px;    
+}
+
+.reservations__table .action {
+    width: 105px;
+    height: 19px;  
+}

@@ -12,7 +12,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .restaurant__dashboard > .reservation__list {
@@ -90,8 +89,83 @@
 }
 
 
-.restaurant__dashboard > .add__table {
+.restaurant__dashboard > .restaurant_tables {
     width: 1308px;
     height: var(--dashboard-hight);
     background-color: #FFF6F7;
+}
+
+.restaurant__dashboard .restaurant_tables .add-table-button {
+    width: 82px;
+    height: 19px;
+    margin-top: 11px;
+    margin-left: 24px;
+    gap: 0px;
+    opacity: 0px;   
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;     
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_tables_container {
+    width: 873px;
+    height: 284px;
+    margin-top: 176px;
+    margin-left: 217px;
+    gap: 0px;
+    opacity: 0px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 51px;
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_table_item {
+    position: relative;
+    width: 102px;
+    height: 70px;
+    background-color: #861A24;
+    border-radius: 12px; 
+}
+
+:root {
+    --margin-top-1st-section-table-item: 8px;
+    --margin-left-1st-section-table-item: 21px;
+    --margin-top-2nd-section-table-item: 39px;
+    --margin-lef-2nd-section-table-item: 61px;
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_table_item .table-no-vector {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    margin-top: var(--margin-top-1st-section-table-item);
+    margin-left: var(--margin-left-1st-section-table-item);
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_table_item .table-no {
+    position: absolute;
+    width: 24.53px;
+    height: 19.28px;
+    margin-top: var(--margin-top-1st-section-table-item);
+    margin-left: var(--margin-lef-2nd-section-table-item);
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_table_item .seats-vector {
+    position: absolute;
+    width: 22px;
+    height: 18px;
+    margin-top: var(--margin-top-2nd-section-table-item);
+    margin-left: var(--margin-left-1st-section-table-item);
+}
+
+.restaurant__dashboard .restaurant_tables .restuarant_table_item .seats-no {
+    position: absolute;
+    width: 7.34px;
+    height: 19.28px;
+    margin-top: var(--margin-top-2nd-section-table-item);
+    margin-left: var(--margin-lef-2nd-section-table-item);
 }

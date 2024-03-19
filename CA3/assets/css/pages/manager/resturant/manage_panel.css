@@ -1,2 +1,6 @@
 @import url(./resturant_info.css);
 @import url(./restaurant_dashboard.css);
+
+body {
+    background-color: #ED3545;
+}

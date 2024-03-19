@@ -1,0 +1,15 @@
+.restaurant-info {
+    position: relative;
+    width: 700px;
+    height: 563px;
+    top: 153px;
+    left: 236px;
+    gap: 0px;
+    opacity: 0px;    
+}
+
+.restaurant-info .restaurant-image {
+    width: 698px;
+    height: 306px;
+    border-radius: 12px 0px 0px 0px; 
+}

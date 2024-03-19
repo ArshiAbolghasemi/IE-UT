@@ -1,15 +1,27 @@
-.restaurant-info {
+:root {
+    --border-radius-restaurant-img: 12px;
+}
+
+.restaurant-image {
     position: relative;
-    width: 700px;
-    height: 563px;
+    width: 698px;
+    height: 306px;
     top: 153px;
-    left: 236px;
+    left: 238px;
     gap: 0px;
+    border-radius: var(--border-radius-restaurant-img);
     opacity: 0px;    
 }
 
-.restaurant-info .restaurant-image {
-    width: 698px;
-    height: 306px;
-    border-radius: 12px 0px 0px 0px; 
+.restaurant-image .shadow {
+    position: absolute;
+    top: 218px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(212, 212, 212, 0.9);
+    box-shadow: 0 0 10px 5px #D4D4D4;
+    border: 1px #D4D4D4;
+    border-bottom-left-radius: var(--border-radius-restaurant-img);
+    border-bottom-right-radius: var(--border-radius-restaurant-img);
+    
 }

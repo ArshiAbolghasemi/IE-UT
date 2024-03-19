@@ -188,3 +188,167 @@
     line-height: 18.96px;
     text-align: justified;      
 }
+
+.reservation {
+    position: absolute;
+    width: 688px;
+    height: 332px;
+    top: 164px;
+    left: 996px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.reservation > .title {
+    position: absolute;
+    width: 295.91px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px; 
+}
+
+.reservation > .info > span {
+    font-family: Spline Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.7px;
+    text-align: left;    
+}
+
+.reservation > .info {
+    position: absolute;
+    width: 427.11px;
+    height: 40px;
+    margin-top: 50px;
+    gap: 0px;
+    opacity: 0px; 
+}
+
+.reservation > .info > span:nth-child(1) {
+    width: 32.54px;
+    height: 19px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;
+    vertical-align: middle;     
+}
+
+.reservation > .info > .seats-count {
+    position: relative;
+    width: 84.05px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.reservation > .info > .seats-count > img {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.reservation > .info > span:nth-child(3) {
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;
+}
+
+.reservation > .info > .date {
+    width: 188px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 12px;
+    border: none;
+    opacity: 0px;    
+    background-color: #F5F5F5;
+}
+
+.reservation > .available-times-title {
+    position: absolute;
+    width: 300px;
+    height: 19px;
+    margin-top: 112px;
+    gap: 0px;
+    opacity: 0px;   
+}
+
+.reservation > .available-times-title > span {
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;    
+}
+
+.reservation > .times {
+    position: absolute;
+    width: 679.05px;
+    height: 90px;
+    top: 147px;
+    gap: 0px;
+    opacity: 0px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+}
+
+.reservation > .times > button {
+    width: 156.93px;
+    height: 40px;
+    border-radius: 12px;
+    border-color: #ED3545;  
+    background-color: #FFFCFC;
+    color: #ED3545;
+}
+
+.reservation > .times > button:hover {
+    background-color: #ED3545;
+    color: #FFFCFC;
+}
+
+.reservation > .res-alert {
+    position: absolute;
+    width: 643px;
+    height: 19px;
+    top: 257px;
+    gap: 0px;
+    opacity: 0px;    
+}
+
+.reservation > .res-alert > span {
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left; 
+}
+
+.reservation > .submit {
+    position: absolute;
+    top: 292px;
+    margin-left: 4px;
+    gap: 0px;
+    opacity: 0px;    
+}
+
+.reservation > .submit > button {
+    width: 680px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: #ED3545;  
+}
+
+.reservation > .submit > button > span {
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;    
+}

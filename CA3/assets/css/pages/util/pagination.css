@@ -1,0 +1,23 @@
+.pagination-circle .page-item {
+    display: inline-block;
+    margin: 0 5px; 
+    line-height: 40px;
+    text-align: center;
+}
+
+.pagination .page-link {
+    border-radius: 50%;   
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 50%;
+}
+
+.pagination .page-link.active {
+    border-color: #ED3545;
+}
+
+.pagination .page-link:hover {
+    color: #ED3545;
+}

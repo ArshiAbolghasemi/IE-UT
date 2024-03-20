@@ -2,6 +2,11 @@
     --border-radius-restaurant-img: 12px;
 }
 
+footer {
+    position: absolute;
+    top: 1917px;
+}
+
 .restaurant-image {
     position: relative;
     width: 698px;

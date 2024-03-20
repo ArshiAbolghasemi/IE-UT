@@ -457,7 +457,6 @@ footer {
     left: 250px;
     gap: 0px;
     opacity: 0px;  
-    background-color: gray;  
 }
 
 .comments > .reviews-cnt {
@@ -491,6 +490,116 @@ footer {
     line-height: 18.96px;
     text-align: left;    
 }
+
+.comments > .comments-container {
+    position: absolute;
+    width: 1444.01px;
+    height: 737px;
+    top: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15.505px;
+}
+
+.comments > .comments-container > .comment-item {
+    width: 1415px;
+    height: 95px; 
+}
+
+.comments > .comments-container > .comment-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    margin-top: 131px;
+    margin-left: -14px;  
+    width: 1434.01px; 
+    height: 2px;
+    border: 1px solid #D9D9D9
+}
+
+.comments > .comments-container > .comment-item > .user-profile-pic {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #F0B5BA;  
+    border-radius: 50%;
+}
+
+.comments > .comments-container > .comment-item > .user-profile-pic > span {
+    width: 29px;
+    height: 26px;
+    font-family: Spline Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.07px;
+    text-align: left;    
+}
+
+.comments > .comments-container > .comment-item > .user-name {
+    position: absolute;
+    width: 200px;
+    height: 26px;
+    margin-top: 12px;
+    margin-left: 69px;  
+    font-family: Spline Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.07px;
+    text-align: left;    
+}
+
+.comments > .comments-container > .comment-item > .rates {
+    position: absolute;
+    width: 260px;
+    height: 14px;
+    margin-top: 50px;
+    margin-left: 71px;
+    font-family: Spline Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.22px;
+    text-align: left;    
+}
+
+.comments > .comments-container > .comment-item > .comment-text {
+    position: absolute;
+    width: 750px;
+    height: 19px;
+    margin-top: 76px;
+    margin-left: 71px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;    
+}
+
+.comments > .comments-container > .comment-item > .rate-stars {
+    position: absolute;
+    width: 124px;
+    height: 20px;   
+    margin-top: 5px;
+    margin-left: 1088px;
+}
+
+.comments > .comments-container > .comment-item > .rate-stars > img{
+    margin-right: 5px;
+}
+
+.comments > .comments-container > .comment-item > .date {
+    position: absolute;
+    width: 190px;
+    height: 19px;
+    margin-top: 5px;
+    margin-left: 1225px;
+    font-family: Spline Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.96px;
+    text-align: left;  
+}
+
 
 .comments > .pager {
     position: absolute;
